@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Main calculator structure -->
+<div class="calculator">
+    <!-- Display area for input and result -->
+    <div class="display" id="display">0</div>
+
+    <!-- Buttons grid -->
+    <div class="buttons">
+        <!-- Row 1: Clear, Percentage, Memory Recall, Division -->
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn" onclick="calculatePercentage()">%</button>
+        <button class="btn" onclick="memoryRecall()">MR</button>
+        <button class="btn" onclick="setOperator('/')">/</button>
+
+        <!-- Row 2: Digits and Multiplication -->
+        <button class="btn" onclick="inputDigit('7')">7</button>
+        <button class="btn" onclick="inputDigit('8')">8</button>
+        <button class="btn" onclick="inputDigit('9')">9</button>
+        <button class="btn" onclick="setOperator('*')">*</button>
+
+        <!-- Row 3: Digits and Subtraction -->
+        <button class="btn" onclick="inputDigit('4')">4</button>
+        <button class="btn" onclick="inputDigit('5')">5</button>
+        <button class="btn" onclick="inputDigit('6')">6</button>
+        <button class="btn" onclick="setOperator('-')">-</button>
+
+        <!-- Row 4: Digits and Addition -->
+        <button class="btn" onclick="inputDigit('1')">1</button>
+        <button class="btn" onclick="inputDigit('2')">2</button>
+        <button class="btn" onclick="inputDigit('3')">3</button>
+        <button class="btn" onclick="setOperator('+')">+</button>
+
+        <!-- Row 5: Zero, Decimal, Square Root, Equals -->
+        <button class="btn" onclick="inputDigit('0')">0</button>
+        <button class="btn" onclick="inputDecimal()">.</button>
+        <button class="btn" onclick="calculateSquareRoot()">√</button>
+        <button class="btn" onclick="calculate()">=</button>
+
+        <!-- Memory Functions: M+, M-, MC -->
+        <button class="btn" onclick="memoryAdd()">M+</button>
+        <button class="btn" onclick="memorySubtract()">M-</button>
+        <button class="btn" onclick="memoryClear()">MC</button>
+    </div>
+</div>
+
+<!-- Link to external JavaScript for functionality -->
+<script src="script.js"></script>
+</body>
+</html>

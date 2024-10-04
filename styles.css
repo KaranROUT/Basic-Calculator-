@@ -1,0 +1,80 @@
+/* Global reset and box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body style: Flexbox layout to center the calculator */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Calculator container style */
+.calculator {
+    width: 320px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Display area style */
+.display {
+    background-color: #333;
+    color: white;
+    font-size: 36px;
+    text-align: right;
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Button grid layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Button style */
+.btn {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Button active (pressed) effect */
+.btn:active {
+    background-color: #ccc;
+}
+
+/* Style for operator buttons (+, -, *, /) */
+.btn:nth-child(4n) {
+    background-color: #f9a825;
+    color: white;
+}
+
+/* Operator button hover effect */
+.btn:nth-child(4n):hover {
+    background-color: #f57f17;
+}
+
+/* Operator button active effect */
+.btn:nth-child(4n):active {
+    background-color: #f9a825;
+}
